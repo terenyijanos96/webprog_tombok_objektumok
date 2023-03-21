@@ -8,18 +8,18 @@ const KUTYAK = [
   { nev: "kutya6", fajta: "fajta6", nem: "szuka" },
 ];
 
-let body;
+let kartyak
 
 function init() {
-  body = document.querySelector("body");
+  kartyak = document.querySelector(".kartyak")
   kartyakLetrehozasa();
 }
 
 function kartyakLetrehozasa() {
   for (let i = 0; i < KUTYAK.length; i++) {
-    const KARTYA = gyerekElemLetrehozo(body, "div", "kartya");
+    const KARTYA = gyerekElemLetrehozo(kartyak, "div", "kartya");
     const KARTYA_FEJ = gyerekElemLetrehozo(KARTYA, "div", "kartya-fejlec")
-    const CIM = gyerekElemLetrehozo(KARTYA_FEJ, "h2");
+    const CIM = gyerekElemLetrehozo(KARTYA_FEJ, "h3");
     const KARTYA_TARTALOM = gyerekElemLetrehozo(KARTYA, "div", "kartya-tartalom")
     const KARTYA_ADATOK_LISTA = gyerekElemLetrehozo(KARTYA_TARTALOM, "ul", "kartya-adatok");
     const TORLO_GOMB = gyerekElemLetrehozo(KARTYA_TARTALOM, "button", "torlo-gomb")
@@ -28,7 +28,7 @@ function kartyakLetrehozasa() {
       const LI = gyerekElemLetrehozo(KARTYA_ADATOK_LISTA, "li");
       LI.innerText = `${KEY}: ${KUTYAK[i][KEY]}`;
     }
-    CIM.innerText = `${i+1}. KÁRTYA`
+    CIM.innerText = `KÁRTYA #${i+1}`
     TORLO_GOMB.innerText = "Törlés"
   }
 }
