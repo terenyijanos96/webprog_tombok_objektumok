@@ -1,11 +1,11 @@
 window.addEventListener("load", init);
 const KUTYAK = [
-  { nev: "kutya1", fajta: "fajta1", nem: "szuka" },
-  { nev: "kutya2", fajta: "fajta2", nem: "kan" },
-  { nev: "kutya3", fajta: "fajta3", nem: "kan" },
-  { nev: "kutya4", fajta: "fajta4", nem: "szuka" },
-  { nev: "kutya5", fajta: "fajta5", nem: "kan" },
-  { nev: "kutya6", fajta: "fajta6", nem: "szuka" },
+  { id: 1, nev: "Manó", fajta: "puli", nem: "szuka" },
+  { id: 2, nev: "Tappancs", fajta: "keverék", nem: "kan" },
+  { id: 3, nev: "Hógolyó", fajta: "puli", nem: "kan" },
+  { id: 4, nev: "Totó", fajta: "pumi", nem: "szuka" },
+  { id: 5, nev: "Rexi", fajta: "farkaskutya", nem: "szuka" },
+  { id: 6, nev: "Pamacs", fajta: "pumi", nem: "szuka" },
 ];
 
 let kartyak
