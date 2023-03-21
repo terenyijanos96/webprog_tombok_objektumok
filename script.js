@@ -11,3 +11,9 @@ const KUTYAK = [
 function init() {
   
 }
+
+function gyerekElemLetrehozo(szulo, gyerek){
+  const GYEREK_ELEM = document.createElement(gyerek)
+  szulo.appendChild(GYEREK_ELEM)
+  return GYEREK_ELEM
+}
