@@ -3,3 +3,59 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 30px;
+    background-color: #358bdc;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: space-evenly;
+}
+
+.kartya {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border: 2px solid black;
+    width: 300px;
+    align-items: center;
+}
+
+.kartya-fejlec {
+    width: 100%;
+}
+
+.kartya-fejlec h2 {
+    background-color: #bbb;
+    color: #000;
+    text-align: center;
+    padding: 20px;
+    border-bottom: 2px solid #000;
+}
+
+.kartya-tartalom {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    padding: 30px;
+    align-items: center;
+}
+
+ul.kartya-adatok {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.torlo-gomb {
+    background: #DC3545;
+    border-color: #ED9AA2;
+    width: 100%;
+    padding: 10px;
+    font-weight: bold;
+    color: #ffffff
+
+}
