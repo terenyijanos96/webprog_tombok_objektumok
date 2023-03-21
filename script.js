@@ -12,8 +12,11 @@ function init() {
   
 }
 
-function gyerekElemLetrehozo(szulo, gyerek){
-  const GYEREK_ELEM = document.createElement(gyerek)
-  szulo.appendChild(GYEREK_ELEM)
-  return GYEREK_ELEM
+function gyerekElemLetrehozo(szulo, gyerek, ...osztalyok) {
+  const GYEREK_ELEM = document.createElement(gyerek);
+  szulo.appendChild(GYEREK_ELEM);
+  if (osztalyok)
+    for (let osztaly of osztalyok) GYEREK_ELEM.classList.add(osztaly);
+
+  return GYEREK_ELEM;
 }
