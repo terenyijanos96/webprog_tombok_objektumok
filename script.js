@@ -13,6 +13,7 @@ let kartyak;
 function init() {
   kartyak = document.querySelector(".kartyak");
   kartyakLetrehozasa();
+  tablazatLetrehozasa();
 }
 
 function kartyakLetrehozasa() {
