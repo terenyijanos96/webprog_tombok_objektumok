@@ -19,7 +19,44 @@
           <h2>1. KÁRTYÁK</h2>
           <div class="kartyak"></div>
         </section>
+        <section class="form-section">
+          <h2>2.1 Új kutya felvitele</h2>
+          <form>
+            <div class="input-group">
+              <label for="kneve">Kutya neve</label>
+              <input
+                type="text"
+                name="kneve"
+                id="kneve"
+                placeholder="pl.: Bodri"
+              />
+            </div>
+
+            <div class="input-group">
+              <label for="kfajta">Kutya fajtája</label>
+              <input
+                type="text"
+                name="kfajta"
+                id="kfajta"
+                placeholder="pl.: Foxterrier"
+              />
+            </div>
+
+            <div class="input-group">
+              <div class="radio-group">
+                <input type="radio" name="kneme" id="kszuka" value="szuka" checked/>
+                <label for="kszuka">Szuka</label>
+              </div>
+              <div class="radio-group">
+                <input type="radio" name="kneme" id="kkan" value="kan" />
+                <label for="kkan">Kan</label>
+              </div>
+            </div>
+            <button type="button" onclick="ujKutyaFelvitele()">Felvitel</button>
+          </form>
+        </section>
         <section class="tablazat-section">
+          <h2>2.2 Táblázat</h2>
           <table id="tablazat">
             <thead>
               <tr>

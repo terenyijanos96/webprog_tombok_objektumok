@@ -11,6 +11,7 @@ body {
 }
 
 h1 {
+  grid-area: cim;
   text-align: center;
   padding: 30px;
   font-size: 70px;
@@ -31,8 +32,23 @@ h2 {
     font-size: 30px;
 }
 
+article {
+  display: grid;
+  grid-template-areas:
+    "cim cim"
+    "kartya-section kartya-section"
+    "form-section tablazat-section";
+  grid-template-columns: 1fr 4fr;
+  gap: 15px;
+  padding: 30px 15px;
+}
+
+section {
+  padding: 0 30px;
+}
+
 .kartya-section {
-    padding: 0 30px;
+  grid-area: kartya-section;
 }
 
 .kartyak {
@@ -82,6 +98,47 @@ ul.kartya-adatok {
   padding: 10px;
   font-weight: bold;
   color: #ffffff;
+
+.form-section {
+  grid-area: form-section;
+}
+
+.tablazat-section {
+  grid-area: tablazat-section;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #fff;
+  padding: 30px;
+  width: 100%;
+  box-shadow: 5px 5px 5px #000;
+  border: 3px solid #000;
+
+}
+
+form input[type=text]{
+  padding: 5px;
+}
+
+form input:focus::placeholder {
+  color: #444
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+form button {
+  padding: 5px;
+}
+
+
+
 table, tr, th, td {
   border: 1px solid black;
   border-collapse: collapse;
