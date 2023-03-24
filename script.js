@@ -38,7 +38,7 @@ function kartyakLetrehozasa() {
       "torlo-gomb"
     );
 
-    KARTYA.setAttribute("index", i + 1);
+    KARTYA.setAttribute("index", KUTYAK[i].id);
 
     for (const KEY in KUTYAK[i]) {
       const LI = gyerekElemLetrehozo(KARTYA_ADATOK_LISTA, "li");
