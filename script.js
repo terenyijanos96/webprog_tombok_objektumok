@@ -97,3 +97,15 @@ function elemTorlese(elem) {
   const SZULO = elem.parentNode;
   SZULO.removeChild(elem);
 }
+
+function ujKutyaFelvitele(){
+  const UJID = KUTYAK.length ? (KUTYAK[KUTYAK.length-1].id + 1) : 1
+  const KNEVE = document.querySelector("#kneve").value
+  const KFAJTA = document.querySelector("#kfajta").value
+  const KNEME = document.querySelector("input[type=radio]:checked").value
+  
+  const KUTYA = {id: UJID, nev: KNEVE, fajta: KFAJTA, nem: KNEME}
+  KUTYAK.push(KUTYA)
+  kartyakLetrehozasa();
+  tablazatLetrehozasa();
+}
