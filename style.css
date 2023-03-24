@@ -21,15 +21,15 @@ h1 {
 }
 
 h1 span {
-    display: block;
+  display: block;
 }
 
 h2 {
-    padding-bottom: 30px;
-    color: #fff;
-    text-shadow: 0 0 3px #000;
-    text-decoration: underline;
-    font-size: 30px;
+  padding-bottom: 30px;
+  color: #fff;
+  text-shadow: 0 0 3px #000;
+  text-decoration: underline;
+  font-size: 30px;
 }
 
 article {
@@ -98,6 +98,16 @@ ul.kartya-adatok {
   padding: 10px;
   font-weight: bold;
   color: #ffffff;
+  cursor: pointer;
+}
+
+.torlo-gomb:hover {
+  background: #ff682e;
+}
+
+.torlo-gomb:active {
+  background: #ff682e;
+}
 
 .form-section {
   grid-area: form-section;

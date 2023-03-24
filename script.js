@@ -8,10 +8,8 @@ const KUTYAK = [
   { id: 6, nev: "Pamacs", fajta: "pumi", nem: "szuka" },
 ];
 
-let kartyak;
 
 function init() {
-  kartyak = document.querySelector(".kartyak");
   kartyakLetrehozasa();
   tablazatLetrehozasa();
 }
