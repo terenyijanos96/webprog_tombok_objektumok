@@ -17,10 +17,11 @@ function init() {
 }
 
 function kartyakLetrehozasa() {
+  const KARTYAK = document.querySelector(".kartyak");
+  KARTYAK.innerHTML = ""
   for (let i = 0; i < KUTYAK.length; i++) {
-    const KARTYA = gyerekElemLetrehozo(kartyak, "div", "kartya");
-    const KARTYA_FEJ = gyerekElemLetrehozo(KARTYA, "div", "kartya-fejlec");
-    const CIM = gyerekElemLetrehozo(KARTYA_FEJ, "h3");
+    const KARTYA = gyerekElemLetrehozo(KARTYAK, "div", "kartya");
+    const CIM = gyerekElemLetrehozo(KARTYA, "h3", "kartya-fejlec");
     const KARTYA_TARTALOM = gyerekElemLetrehozo(
       KARTYA,
       "div",
@@ -53,14 +54,15 @@ function kartyakLetrehozasa() {
 }
 
 function listaElemTorlese(e) {
-  let szulo = e.target.parentNode.parentNode;
-  let azon = szulo.attributes["index"].value;
+  const KARTYA = e.target.parentNode.parentNode;
+  let azon = KARTYA.attributes["index"].value;
 
   let i = 0;
   while (KUTYAK[i].id != azon) i++;
 
   KUTYAK.splice(i, 1);
-  szulo.remove();
+  elemTorlese(KARTYA);
+  tablazatSorTorlese(i);
 }
 
 function gyerekElemLetrehozo(szulo, gyerek, ...osztalyok) {
@@ -83,4 +85,15 @@ function tablazatLetrehozasa() {
       TABLAZAT_MEZO.innerText = KUTYAK[i][key];
     }
   }
+}
+
+function tablazatSorTorlese(index) {
+  const QUERY = `#tablazat tbody tr:nth-of-type(${index + 1})`
+  const SOR = document.querySelector(QUERY);
+  elemTorlese(SOR);
+}
+
+function elemTorlese(elem) {
+  const SZULO = elem.parentNode;
+  SZULO.removeChild(elem);
 }

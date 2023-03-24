@@ -38,7 +38,7 @@ h2 {
 .kartyak {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px
+  gap: 30px;
 }
 
 .kartya {
@@ -51,16 +51,13 @@ h2 {
   box-shadow: 5px 5px 5px #000;
 }
 
-.kartya-fejlec {
-  width: 100%;
-}
-
-.kartya-fejlec h3 {
+h3.kartya-fejlec {
   background-color: #bbb;
   color: #000;
   text-align: center;
   padding: 20px;
   border-bottom: 2px solid #000;
+  width: 100%;
 }
 
 .kartya-tartalom {
