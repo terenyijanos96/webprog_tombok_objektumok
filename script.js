@@ -70,3 +70,16 @@ function gyerekElemLetrehozo(szulo, gyerek, ...osztalyok) {
 
   return GYEREK_ELEM;
 }
+
+function tablazatLetrehozasa() {
+  const TBODY = document.querySelector("#tablazat tbody");
+  TBODY.innerHTML = "";
+
+  for (let i = 0; i < KUTYAK.length; i++) {
+    const TABLAZAT_SOR = gyerekElemLetrehozo(TBODY, "tr");
+    for (const key in KUTYAK[0]) {
+      const TABLAZAT_MEZO = gyerekElemLetrehozo(TABLAZAT_SOR, "td");
+      TABLAZAT_MEZO.innerText = KUTYAK[i][key];
+    }
+  }
+}

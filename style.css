@@ -85,4 +85,28 @@ ul.kartya-adatok {
   padding: 10px;
   font-weight: bold;
   color: #ffffff;
+table, tr, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+table {
+  background-color: #fff;
+  width: 100%;
+  border-width: 3px;
+  box-shadow: 5px 5px 5px #000;
+
+}
+
+th, td {
+  padding: 20px;
+}
+
+th {
+  background-color: #bbb;
+  border-bottom-width: 2px;
+}
+
+tr:nth-of-type(2n - 1){
+  background-color: #eee;
 }
